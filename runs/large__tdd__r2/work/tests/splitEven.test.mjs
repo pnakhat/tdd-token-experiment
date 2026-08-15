@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { splitEven } from '../src/index.mjs';
 
-test('splitEven distributes remainder to first N elements', () => {
+test('splitEven splits evenly with remainder going to first elements', () => {
   assert.deepEqual(splitEven(100, 3), [34, 33, 33]);
 });
 

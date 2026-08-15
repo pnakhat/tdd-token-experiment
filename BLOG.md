@@ -81,7 +81,7 @@ footnote on how I nearly fooled myself.)
 
 ## What I found
 
-17 valid agent runs on Claude Sonnet 5. Total spend: $13.04.
+18 valid agent runs on Claude Sonnet 5, two per cell across nine cells. Total spend: $18.58.
 
 | task | arm | raw tokens | cost | turns | test runs | src LOC | test LOC | hold-out |
 |---|---|---|---|---|---|---|---|---|
@@ -91,7 +91,7 @@ footnote on how I nearly fooled myself.)
 | medium | tdd | 6,218,580 | $2.819 | 119 | 56 | 105 | 147 | 100% |
 | medium | spec-first | 132,931 | $0.255 | 6 | 1 | 122 | 206 | 100% |
 | medium | no-tests | 86,972 | $0.115 | 5 | 0 | 120 | 0 | 100% |
-| large | tdd | 9,393,939 | $3.983 | 157 | 75 | 203 | 192 | 100% |
+| large | tdd | 11,559,024 | $4.760 | 175 | 80 | 197 | 265 | 100% |
 | large | spec-first | 165,262 | $0.466 | 7 | 1 | 205 | 394 | 100% |
 | large | no-tests | 113,575 | $0.202 | 6 | 0 | 169 | 0 | 100% |
 
@@ -101,21 +101,21 @@ footnote on how I nearly fooled myself.)
 |---|---|---|---|
 | small | 10.0× | 6.0× | **1.65×** |
 | medium | 71.5× | 24.6× | **2.90×** |
-| large | 82.7× | 19.7× | **4.19×** |
+| large | 101.8× | 23.6× | **4.31×** |
 
-*(TDD vs no-tests. Against spec-first the overstatement runs 1.8× / 4.2× / 6.6×.)*
+*(TDD vs no-tests. Against spec-first the overstatement runs 1.8× / 4.2× / 6.9×.)*
 
 The distortion isn't a rounding error, and it isn't constant. **It compounds with task
 size** — because bigger tasks mean longer sessions, longer sessions mean more accumulated
 context, and more accumulated context means the cache-read share of the total grows. On the
-large task, the headline metric overstates the actual bill by more than **4×**.
+large task, the headline metric overstates the actual bill by more than **4.3×**.
 
 Which means the number is least trustworthy exactly where people quote it as most
 conservative.
 
 ### Finding 2 — the multiplier is a dial, and adherence turns it
 
-My raw-token ratios (10× / 71× / 83×) run far above the published 8.50× / 2.96× / 4.89×.
+My raw-token ratios (10× / 71× / 102×) run far above the published 8.50× / 2.96× / 4.89×.
 That isn't a contradiction. It's the most useful thing I learned.
 
 Böckeler reports her agents frequently **skipped or faked the red step** — TDD, she writes,
@@ -123,7 +123,7 @@ is "an uphill battle against the training data." A partially-followed TDD loop i
 TDD loop.
 
 My arm prompt pushes the other way: it forbids batching behaviours and demands an observed
-test run in every red, green and refactor step. The runs bear that out — **75 test-runner
+test run in every red, green and refactor step. The runs bear that out — **80 test-runner
 invocations** on the large task, against 1 for spec-first.
 
 So the honest statement isn't "TDD costs N×." It's that **the multiplier is a function of
@@ -136,12 +136,12 @@ level attached is close to meaningless.
 |---|---|---|
 | small | 33 | 7 |
 | medium | 119 | 6 |
-| large | 157 | 7 |
+| large | 175 | 7 |
 
 **Spec-first is roughly constant in turns regardless of task size. TDD is roughly linear in
 the number of behaviours**, because the process *defines* a cycle per behaviour.
 
-Then tokens grow faster than turns — 12× the raw usage across a 4.8× rise in turns — because
+Then tokens grow faster than turns — 14.7× the raw usage across a 5.3× rise in turns — because
 each additional turn re-reads a context that is itself bigger than it was last turn. That
 compounding is the entire cost story.
 
@@ -153,9 +153,9 @@ This one I did not expect. Averaged test-suite size:
 |---|---|---|
 | small | 42 LOC | 109 LOC |
 | medium | 147 LOC | 206 LOC |
-| large | 192 LOC | 394 LOC |
+| large | 265 LOC | 394 LOC |
 
-The spec-first arm wrote **roughly twice the test code** — while spending a fraction of the
+The spec-first arm wrote **1.4× to 2.6× more test code** — while spending a fraction of the
 tokens. Writing tests first didn't buy more testing here. It bought the same implementation
 and a thinner suite, more slowly.
 
@@ -210,7 +210,7 @@ ceremony of ordering them first when the design work is already done.
 
 ## Limitations, stated plainly
 
-- **Small n.** 17 agent runs. Agent runs are high-variance; per-run numbers are published in
+- **Small n.** 18 agent runs, two per cell. Agent runs are high-variance; per-run numbers are published in
   the repo so you can see the spread rather than trust my means. Re-running a small-n study
   does not make it a large-n study.
 - **The quality result is a ceiling effect**, not a ranking. See Finding 5.
@@ -239,6 +239,11 @@ rail. The large TDD runs hit it — and *only* the TDD runs, because they're the
 expensive enough to reach it. A cap tight enough to bite truncates the priciest arm and
 silently biases its multiplier **downward**. I'd have published a number that made TDD look
 cheaper than it is, for a reason that had nothing to do with TDD.
+
+I can put a figure on it, because I re-ran those cells uncapped. The large-task TDD arm went
+from 9.4M raw tokens and $3.98 to **11.6M and $4.76** — and its raw-token multiplier from
+82.7× to **101.8×**. The censored version understated the very thing the experiment exists to
+measure by around 20%.
 
 Both failure modes share a shape: an environmental problem wearing an experimental result's
 clothes. If you run these things, validate every trial and exclude what didn't finish.

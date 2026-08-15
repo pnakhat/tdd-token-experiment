@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T11:15:28.709Z",
+  "generatedAt": "2026-08-15T11:28:54.052Z",
   "model": "claude-sonnet-5",
   "pricing": {
     "input": 3,
@@ -18,17 +18,10 @@
   },
   "costModelAgreement": 1,
   "trialCount": 21,
-  "agentTrialCount": 17,
-  "discardedCount": 1,
-  "discarded": [
-    {
-      "runId": "large__tdd__r2",
-      "reasons": [
-        "api error (stop_reason: tool_use)"
-      ]
-    }
-  ],
-  "totalSpendUSD": 13.042944900000002,
+  "agentTrialCount": 18,
+  "discardedCount": 0,
+  "discarded": [],
+  "totalSpendUSD": 18.5809095,
   "cells": {
     "small::tdd": {
       "task": "small",
@@ -367,42 +360,44 @@
     "large::tdd": {
       "task": "large",
       "arm": "tdd",
-      "n": 1,
-      "discarded": [
-        {
-          "runId": "large__tdd__r2",
-          "reasons": [
-            "api error (stop_reason: tool_use)"
-          ]
-        }
-      ],
+      "n": 2,
+      "discarded": [],
       "agentRan": true,
-      "rawTokens": 9393939,
-      "freshTokens": 988,
-      "outputTokens": 42550,
-      "cacheReadTokens": 9256056,
-      "cacheWriteTokens": 94345,
-      "costUSD": 3.9825888000000003,
-      "reportedCostUSD": 3.982588799999999,
-      "turns": 157,
-      "toolCalls": 156,
-      "testRuns": 75,
-      "srcLoc": 203,
-      "testsLoc": 192,
+      "rawTokens": 11559023.5,
+      "freshTokens": 1022,
+      "outputTokens": 47696.5,
+      "cacheReadTokens": 11406764,
+      "cacheWriteTokens": 103541,
+      "costUSD": 4.7602767,
+      "reportedCostUSD": 4.760276700000002,
+      "turns": 174.5,
+      "toolCalls": 173.5,
+      "testRuns": 79.5,
+      "srcLoc": 197,
+      "testsLoc": 265,
       "holdoutPass": 29,
       "holdoutTotal": 29,
       "holdoutPassRate": 1,
-      "perfectRuns": 1,
-      "wallClockMs": 510295,
+      "perfectRuns": 2,
+      "wallClockMs": 878176,
       "trials": [
         {
           "runId": "large__tdd__r1",
           "holdoutPass": 29,
-          "rawTokens": 9393939,
-          "costUSD": 3.9825888000000003,
-          "testRuns": 75,
-          "srcLoc": 203,
-          "testsLoc": 192
+          "rawTokens": 9531519,
+          "costUSD": 4.0249815,
+          "testRuns": 71,
+          "srcLoc": 197,
+          "testsLoc": 267
+        },
+        {
+          "runId": "large__tdd__r2",
+          "holdoutPass": 29,
+          "rawTokens": 13586528,
+          "costUSD": 5.495571900000002,
+          "testRuns": 88,
+          "srcLoc": 197,
+          "testsLoc": 263
         }
       ]
     },
@@ -578,23 +573,23 @@
     "large::vs-no-tests": {
       "task": "large",
       "baseline": "no-tests",
-      "rawTokenMultiplier": 82.71169144482256,
-      "costMultiplier": 19.74705883227944,
-      "outputTokenMultiplier": 6.596899224806202,
-      "freshTokenMultiplier": 1.438136826783115,
-      "turnMultiplier": 28.545454545454547,
-      "wallClockMultiplier": 9.299140782316334,
+      "rawTokenMultiplier": 101.77481300820166,
+      "costMultiplier": 23.603105611312174,
+      "outputTokenMultiplier": 7.394806201550388,
+      "freshTokenMultiplier": 1.487627365356623,
+      "turnMultiplier": 31.727272727272727,
+      "wallClockMultiplier": 16.003061475521864,
       "qualityDelta": 0
     },
     "large::vs-spec-first": {
       "task": "large",
       "baseline": "spec-first",
-      "rawTokenMultiplier": 56.84270431194104,
-      "costMultiplier": 8.555370703519353,
-      "outputTokenMultiplier": 2.345257123959654,
-      "freshTokenMultiplier": 1.436046511627907,
-      "turnMultiplier": 22.428571428571427,
-      "wallClockMultiplier": 3.567099597360474,
+      "rawTokenMultiplier": 69.94362587890743,
+      "costMultiplier": 10.225994664532223,
+      "outputTokenMultiplier": 2.6289202447224826,
+      "freshTokenMultiplier": 1.4854651162790697,
+      "turnMultiplier": 24.928571428571427,
+      "wallClockMultiplier": 6.138686947768706,
       "qualityDelta": 0
     }
   },

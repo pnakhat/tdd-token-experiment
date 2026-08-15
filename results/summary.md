@@ -1,6 +1,6 @@
 # Does TDD really cost your coding agent 8×?
 
-Replication of [Böckeler's TDD-in-the-agent-loop experiment](https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html). 17 agent runs on `claude-sonnet-5`, total spend $13.04. Generated 2026-08-15.
+Replication of [Böckeler's TDD-in-the-agent-loop experiment](https://martinfowler.com/articles/exploring-gen-ai/tdd-in-the-agent-loop.html). 18 agent runs on `claude-sonnet-5`, total spend $18.58. Generated 2026-08-15.
 
 ## Headline
 
@@ -8,7 +8,7 @@ Replication of [Böckeler's TDD-in-the-agent-loop experiment](https://martinfowl
 |---|---|---|---|---|
 | small | 10.00× | 6.05× | 4.37× | 8.50× |
 | medium | 71.50× | 24.61× | 11.05× | 2.96× |
-| large | 82.71× | 19.75× | 8.56× | 4.89× |
+| large | 101.77× | 23.60× | 10.23× | 4.89× |
 
 > Raw tokens = `input + output + cacheRead + cacheWrite` weighted equally, the metric the original study reports. Cost prices those same tokens at published rates (cache reads at 0.1×).
 
@@ -24,12 +24,10 @@ Replication of [Böckeler's TDD-in-the-agent-loop experiment](https://martinfowl
 | medium | spec-first | 2 | 132,931 | 8,699 | $0.255 | 6 | 1 | 122 | 206 | 21.0/21 (100%) |
 | medium | no-tests | 2 | 86,972 | 2,919 | $0.115 | 5 | 0 | 120 | 0 | 21.0/21 (100%) |
 | medium | reference | 1 | — | — | — | — | — | 150 | 0 | 21.0/21 (100%) |
-| large | tdd | 1 | 9,393,939 | 42,550 | $3.983 | 157 | 75 | 203 | 192 | 29.0/29 (100%) |
+| large | tdd | 2 | 11,559,024 | 47,697 | $4.760 | 175 | 80 | 197 | 265 | 29.0/29 (100%) |
 | large | spec-first | 2 | 165,262 | 18,143 | $0.466 | 7 | 1 | 205 | 394 | 29.0/29 (100%) |
 | large | no-tests | 2 | 113,575 | 6,450 | $0.202 | 6 | 0 | 169 | 0 | 29.0/29 (100%) |
 | large | reference | 1 | — | — | — | — | — | 150 | 0 | 29.0/29 (100%) |
-
-**Discarded and re-run:** `large__tdd__r2` (api error (stop_reason: tool_use)). Excluded from all averages.
 
 ## Source figures being replicated
 

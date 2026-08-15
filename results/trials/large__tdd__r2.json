@@ -5,11 +5,9 @@
   "repeat": 2,
   "model": "claude-sonnet-5",
   "agentRan": true,
-  "valid": false,
-  "invalidReasons": [
-    "api error (stop_reason: tool_use)"
-  ],
-  "exitCode": 1,
+  "valid": true,
+  "invalidReasons": [],
+  "exitCode": 0,
   "timedOut": false,
   "usage": {
     "perModel": {
@@ -21,11 +19,11 @@
         "reportedCostUSD": 0.0007559999999999999
       },
       "claude-sonnet-5": {
-        "inputTokens": 316,
-        "outputTokens": 46419,
-        "cacheReadInputTokens": 9213604,
-        "cacheCreationInputTokens": 93112,
-        "reportedCostUSD": 4.019986199999999
+        "inputTokens": 390,
+        "outputTokens": 52219,
+        "cacheReadInputTokens": 13419123,
+        "cacheCreationInputTokens": 114104,
+        "reportedCostUSD": 5.494815900000003
       }
     },
     "priced": [
@@ -48,53 +46,53 @@
       {
         "model": "claude-sonnet-5",
         "priced": true,
-        "costUSD": 2.6799908,
+        "costUSD": 5.494815900000002,
         "rates": {
-          "input": 2,
-          "output": 10,
-          "note": "introductory pricing through 2026-08-31"
+          "input": 3,
+          "output": 15,
+          "note": "list price; introductory $2/$10 through 2026-08-31"
         },
         "tokens": {
-          "fresh": 316,
-          "output": 46419,
-          "cacheRead": 9213604,
+          "fresh": 390,
+          "output": 52219,
+          "cacheRead": 13419123,
           "cacheWrite5m": 0,
-          "cacheWrite1h": 93112
+          "cacheWrite1h": 114104
         }
       }
     ],
     "tokens": {
-      "fresh": 992,
-      "output": 46435,
-      "cacheRead": 9213604,
+      "fresh": 1066,
+      "output": 52235,
+      "cacheRead": 13419123,
       "cacheWrite5m": 0,
-      "cacheWrite1h": 93112
+      "cacheWrite1h": 114104
     },
-    "rawTokenTotal": 9354143,
-    "recomputedCostUSD": 2.6807468,
-    "reportedCostUSD": 4.020742199999999,
-    "numTurns": 159,
-    "durationMs": 541025,
-    "stopReason": "tool_use",
-    "isError": true,
-    "permissionDenials": 0
+    "rawTokenTotal": 13586528,
+    "recomputedCostUSD": 5.495571900000002,
+    "reportedCostUSD": 5.495571900000004,
+    "numTurns": 196,
+    "durationMs": 633986,
+    "stopReason": "end_turn",
+    "isError": false,
+    "permissionDenials": 1
   },
   "process": {
-    "toolCalls": 159,
-    "testRuns": 76,
-    "fileWrites": 77,
-    "numTurns": 159
+    "toolCalls": 195,
+    "testRuns": 88,
+    "fileWrites": 88,
+    "numTurns": 196
   },
   "workspace": {
     "src": {
       "files": 1,
-      "lines": 145,
-      "bytes": 6460
+      "lines": 197,
+      "bytes": 6983
     },
     "tests": {
       "files": 6,
-      "lines": 270,
-      "bytes": 10815
+      "lines": 263,
+      "bytes": 10118
     }
   },
   "score": {
@@ -103,5 +101,5 @@
     "holdoutFail": 0,
     "holdoutExit": 0
   },
-  "wallClockMs": 542053
+  "wallClockMs": 635507
 }
