@@ -1,0 +1,619 @@
+{
+  "generatedAt": "2026-08-15T11:08:42.599Z",
+  "model": "claude-sonnet-5",
+  "pricing": {
+    "input": 3,
+    "output": 15,
+    "note": "list price; introductory $2/$10 through 2026-08-31"
+  },
+  "thoughtworks": {
+    "small": 8.5,
+    "medium": 2.96,
+    "large": 4.89
+  },
+  "holdoutTotals": {
+    "small": 15,
+    "medium": 21,
+    "large": 29
+  },
+  "costModelAgreement": 1,
+  "trialCount": 21,
+  "agentTrialCount": 17,
+  "discardedCount": 1,
+  "discarded": [
+    {
+      "runId": "large__tdd__r2",
+      "reasons": [
+        "api error (stop_reason: tool_use)"
+      ]
+    }
+  ],
+  "totalSpendUSD": 13.042944900000002,
+  "cells": {
+    "small::tdd": {
+      "task": "small",
+      "arm": "tdd",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 785295.5,
+      "freshTokens": 742,
+      "outputTokens": 8377,
+      "cacheReadTokens": 754294,
+      "cacheWriteTokens": 21882.5,
+      "costUSD": 0.4839522,
+      "reportedCostUSD": 0.48395219999999994,
+      "turns": 33,
+      "toolCalls": 32,
+      "testRuns": 15,
+      "srcLoc": 18,
+      "testsLoc": 42,
+      "holdoutPass": 15,
+      "holdoutTotal": 15,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 106592,
+      "trials": [
+        {
+          "runId": "small__tdd__r1",
+          "holdoutPass": 15,
+          "rawTokens": 677850,
+          "costUSD": 0.4409259,
+          "testRuns": 13,
+          "srcLoc": 18,
+          "testsLoc": 39
+        },
+        {
+          "runId": "small__tdd__r2",
+          "holdoutPass": 15,
+          "rawTokens": 892741,
+          "costUSD": 0.5269785,
+          "testRuns": 17,
+          "srcLoc": 18,
+          "testsLoc": 45
+        }
+      ]
+    },
+    "small::spec-first": {
+      "task": "small",
+      "arm": "spec-first",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 98764,
+      "freshTokens": 688,
+      "outputTokens": 2731.5,
+      "cacheReadTokens": 88217.5,
+      "cacheWriteTokens": 7127,
+      "costUSD": 0.11075175000000001,
+      "reportedCostUSD": 0.11075174999999998,
+      "turns": 6.5,
+      "toolCalls": 5.5,
+      "testRuns": 1,
+      "srcLoc": 18,
+      "testsLoc": 109,
+      "holdoutPass": 15,
+      "holdoutTotal": 15,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 28041,
+      "trials": [
+        {
+          "runId": "small__spec-first__r1",
+          "holdoutPass": 15,
+          "rawTokens": 99173,
+          "costUSD": 0.11171520000000001,
+          "testRuns": 1,
+          "srcLoc": 18,
+          "testsLoc": 104
+        },
+        {
+          "runId": "small__spec-first__r2",
+          "holdoutPass": 15,
+          "rawTokens": 98355,
+          "costUSD": 0.1097883,
+          "testRuns": 1,
+          "srcLoc": 18,
+          "testsLoc": 114
+        }
+      ]
+    },
+    "small::no-tests": {
+      "task": "small",
+      "arm": "no-tests",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 78542,
+      "freshTokens": 686,
+      "outputTokens": 1694,
+      "cacheReadTokens": 70683.5,
+      "cacheWriteTokens": 5478.5,
+      "costUSD": 0.08003205000000001,
+      "reportedCostUSD": 0.08003205,
+      "turns": 5,
+      "toolCalls": 4,
+      "testRuns": 0,
+      "srcLoc": 18,
+      "testsLoc": 0,
+      "holdoutPass": 15,
+      "holdoutTotal": 15,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 23491.5,
+      "trials": [
+        {
+          "runId": "small__no-tests__r1",
+          "holdoutPass": 15,
+          "rawTokens": 75406,
+          "costUSD": 0.06388440000000001,
+          "testRuns": 0,
+          "srcLoc": 18,
+          "testsLoc": 0
+        },
+        {
+          "runId": "small__no-tests__r2",
+          "holdoutPass": 15,
+          "rawTokens": 81678,
+          "costUSD": 0.0961797,
+          "testRuns": 0,
+          "srcLoc": 18,
+          "testsLoc": 0
+        }
+      ]
+    },
+    "small::reference": {
+      "task": "small",
+      "arm": "reference",
+      "n": 1,
+      "discarded": [],
+      "agentRan": false,
+      "rawTokens": 0,
+      "freshTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0,
+      "costUSD": 0,
+      "reportedCostUSD": 0,
+      "turns": 0,
+      "toolCalls": 0,
+      "testRuns": 0,
+      "srcLoc": 150,
+      "testsLoc": 0,
+      "holdoutPass": 15,
+      "holdoutTotal": 15,
+      "holdoutPassRate": 1,
+      "perfectRuns": 1,
+      "wallClockMs": 77,
+      "trials": [
+        {
+          "runId": "small__reference__r1",
+          "holdoutPass": 15,
+          "rawTokens": null,
+          "costUSD": null,
+          "testRuns": 0,
+          "srcLoc": 150,
+          "testsLoc": 0
+        }
+      ]
+    },
+    "medium::tdd": {
+      "task": "medium",
+      "arm": "tdd",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 6218579.5,
+      "freshTokens": 912,
+      "outputTokens": 32857.5,
+      "cacheReadTokens": 6102491,
+      "cacheWriteTokens": 82319,
+      "costUSD": 2.8187478000000006,
+      "reportedCostUSD": 2.818747799999999,
+      "turns": 118.5,
+      "toolCalls": 117.5,
+      "testRuns": 56,
+      "srcLoc": 105,
+      "testsLoc": 147,
+      "holdoutPass": 21,
+      "holdoutTotal": 21,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 395936,
+      "trials": [
+        {
+          "runId": "medium__tdd__r1",
+          "holdoutPass": 21,
+          "rawTokens": 7100638,
+          "costUSD": 3.1530810000000002,
+          "testRuns": 61,
+          "srcLoc": 103,
+          "testsLoc": 138
+        },
+        {
+          "runId": "medium__tdd__r2",
+          "holdoutPass": 21,
+          "rawTokens": 5336521,
+          "costUSD": 2.4844146000000005,
+          "testRuns": 51,
+          "srcLoc": 107,
+          "testsLoc": 156
+        }
+      ]
+    },
+    "medium::spec-first": {
+      "task": "medium",
+      "arm": "spec-first",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 132930.5,
+      "freshTokens": 688,
+      "outputTokens": 8698.5,
+      "cacheReadTokens": 108299.5,
+      "cacheWriteTokens": 15244.5,
+      "costUSD": 0.25498635000000003,
+      "reportedCostUSD": 0.25498635000000003,
+      "turns": 6,
+      "toolCalls": 5,
+      "testRuns": 1,
+      "srcLoc": 122,
+      "testsLoc": 206,
+      "holdoutPass": 21,
+      "holdoutTotal": 21,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 70378.5,
+      "trials": [
+        {
+          "runId": "medium__spec-first__r1",
+          "holdoutPass": 21,
+          "rawTokens": 140042,
+          "costUSD": 0.2777121,
+          "testRuns": 1,
+          "srcLoc": 124,
+          "testsLoc": 223
+        },
+        {
+          "runId": "medium__spec-first__r2",
+          "holdoutPass": 21,
+          "rawTokens": 125819,
+          "costUSD": 0.2322606,
+          "testRuns": 1,
+          "srcLoc": 120,
+          "testsLoc": 189
+        }
+      ]
+    },
+    "medium::no-tests": {
+      "task": "medium",
+      "arm": "no-tests",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 86971.5,
+      "freshTokens": 686,
+      "outputTokens": 2918.5,
+      "cacheReadTokens": 75439.5,
+      "cacheWriteTokens": 7927.5,
+      "costUSD": 0.11452035000000002,
+      "reportedCostUSD": 0.11452034999999999,
+      "turns": 5,
+      "toolCalls": 4,
+      "testRuns": 0,
+      "srcLoc": 120,
+      "testsLoc": 0,
+      "holdoutPass": 21,
+      "holdoutTotal": 21,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 30839.5,
+      "trials": [
+        {
+          "runId": "medium__no-tests__r1",
+          "holdoutPass": 21,
+          "rawTokens": 104821,
+          "costUSD": 0.13354800000000003,
+          "testRuns": 0,
+          "srcLoc": 120,
+          "testsLoc": 0
+        },
+        {
+          "runId": "medium__no-tests__r2",
+          "holdoutPass": 21,
+          "rawTokens": 69122,
+          "costUSD": 0.09549270000000001,
+          "testRuns": 0,
+          "srcLoc": 120,
+          "testsLoc": 0
+        }
+      ]
+    },
+    "medium::reference": {
+      "task": "medium",
+      "arm": "reference",
+      "n": 1,
+      "discarded": [],
+      "agentRan": false,
+      "rawTokens": 0,
+      "freshTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0,
+      "costUSD": 0,
+      "reportedCostUSD": 0,
+      "turns": 0,
+      "toolCalls": 0,
+      "testRuns": 0,
+      "srcLoc": 150,
+      "testsLoc": 0,
+      "holdoutPass": 21,
+      "holdoutTotal": 21,
+      "holdoutPassRate": 1,
+      "perfectRuns": 1,
+      "wallClockMs": 70,
+      "trials": [
+        {
+          "runId": "medium__reference__r1",
+          "holdoutPass": 21,
+          "rawTokens": null,
+          "costUSD": null,
+          "testRuns": 0,
+          "srcLoc": 150,
+          "testsLoc": 0
+        }
+      ]
+    },
+    "large::tdd": {
+      "task": "large",
+      "arm": "tdd",
+      "n": 1,
+      "discarded": [
+        {
+          "runId": "large__tdd__r2",
+          "reasons": [
+            "api error (stop_reason: tool_use)"
+          ]
+        }
+      ],
+      "agentRan": true,
+      "rawTokens": 9393939,
+      "freshTokens": 988,
+      "outputTokens": 42550,
+      "cacheReadTokens": 9256056,
+      "cacheWriteTokens": 94345,
+      "costUSD": 3.9825888000000003,
+      "reportedCostUSD": 3.982588799999999,
+      "turns": 157,
+      "toolCalls": 156,
+      "testRuns": 75,
+      "srcLoc": 203,
+      "testsLoc": 192,
+      "holdoutPass": 29,
+      "holdoutTotal": 29,
+      "holdoutPassRate": 1,
+      "perfectRuns": 1,
+      "wallClockMs": 510295,
+      "trials": [
+        {
+          "runId": "large__tdd__r1",
+          "holdoutPass": 29,
+          "rawTokens": 9393939,
+          "costUSD": 3.9825888000000003,
+          "testRuns": 75,
+          "srcLoc": 203,
+          "testsLoc": 192
+        }
+      ]
+    },
+    "large::spec-first": {
+      "task": "large",
+      "arm": "spec-first",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 165262,
+      "freshTokens": 688,
+      "outputTokens": 18143,
+      "cacheReadTokens": 120311.5,
+      "cacheWriteTokens": 26119.5,
+      "costUSD": 0.46550745,
+      "reportedCostUSD": 0.46550745000000004,
+      "turns": 7,
+      "toolCalls": 6,
+      "testRuns": 1,
+      "srcLoc": 204.5,
+      "testsLoc": 394,
+      "holdoutPass": 29,
+      "holdoutTotal": 29,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 143056,
+      "trials": [
+        {
+          "runId": "large__spec-first__r1",
+          "holdoutPass": 29,
+          "rawTokens": 160024,
+          "costUSD": 0.4410282,
+          "testRuns": 1,
+          "srcLoc": 184,
+          "testsLoc": 437
+        },
+        {
+          "runId": "large__spec-first__r2",
+          "holdoutPass": 29,
+          "rawTokens": 170500,
+          "costUSD": 0.4899867,
+          "testRuns": 1,
+          "srcLoc": 225,
+          "testsLoc": 351
+        }
+      ]
+    },
+    "large::no-tests": {
+      "task": "large",
+      "arm": "no-tests",
+      "n": 2,
+      "discarded": [],
+      "agentRan": true,
+      "rawTokens": 113574.5,
+      "freshTokens": 687,
+      "outputTokens": 6450,
+      "cacheReadTokens": 93727,
+      "cacheWriteTokens": 12710.5,
+      "costUSD": 0.2016801,
+      "reportedCostUSD": 0.20168010000000003,
+      "turns": 5.5,
+      "toolCalls": 4.5,
+      "testRuns": 0,
+      "srcLoc": 168.5,
+      "testsLoc": 0,
+      "holdoutPass": 29,
+      "holdoutTotal": 29,
+      "holdoutPassRate": 1,
+      "perfectRuns": 2,
+      "wallClockMs": 54875.5,
+      "trials": [
+        {
+          "runId": "large__no-tests__r1",
+          "holdoutPass": 29,
+          "rawTokens": 141665,
+          "costUSD": 0.1994286,
+          "testRuns": 0,
+          "srcLoc": 170,
+          "testsLoc": 0
+        },
+        {
+          "runId": "large__no-tests__r2",
+          "holdoutPass": 29,
+          "rawTokens": 85484,
+          "costUSD": 0.2039316,
+          "testRuns": 0,
+          "srcLoc": 167,
+          "testsLoc": 0
+        }
+      ]
+    },
+    "large::reference": {
+      "task": "large",
+      "arm": "reference",
+      "n": 1,
+      "discarded": [],
+      "agentRan": false,
+      "rawTokens": 0,
+      "freshTokens": 0,
+      "outputTokens": 0,
+      "cacheReadTokens": 0,
+      "cacheWriteTokens": 0,
+      "costUSD": 0,
+      "reportedCostUSD": 0,
+      "turns": 0,
+      "toolCalls": 0,
+      "testRuns": 0,
+      "srcLoc": 150,
+      "testsLoc": 0,
+      "holdoutPass": 29,
+      "holdoutTotal": 29,
+      "holdoutPassRate": 1,
+      "perfectRuns": 1,
+      "wallClockMs": 74,
+      "trials": [
+        {
+          "runId": "large__reference__r1",
+          "holdoutPass": 29,
+          "rawTokens": null,
+          "costUSD": null,
+          "testRuns": 0,
+          "srcLoc": 150,
+          "testsLoc": 0
+        }
+      ]
+    }
+  },
+  "ratios": {
+    "small::vs-no-tests": {
+      "task": "small",
+      "baseline": "no-tests",
+      "rawTokenMultiplier": 9.998414860838787,
+      "costMultiplier": 6.046979928666078,
+      "outputTokenMultiplier": 4.945100354191263,
+      "freshTokenMultiplier": 1.0816326530612246,
+      "turnMultiplier": 6.6,
+      "wallClockMultiplier": 4.53747100014899,
+      "qualityDelta": 0
+    },
+    "small::vs-spec-first": {
+      "task": "small",
+      "baseline": "spec-first",
+      "rawTokenMultiplier": 7.95123223036734,
+      "costMultiplier": 4.36970251034408,
+      "outputTokenMultiplier": 3.0668131063518214,
+      "freshTokenMultiplier": 1.0784883720930232,
+      "turnMultiplier": 5.076923076923077,
+      "wallClockMultiplier": 3.801290966798616,
+      "qualityDelta": 0
+    },
+    "medium::vs-no-tests": {
+      "task": "medium",
+      "baseline": "no-tests",
+      "rawTokenMultiplier": 71.5013481427824,
+      "costMultiplier": 24.613510175265795,
+      "outputTokenMultiplier": 11.25835189309577,
+      "freshTokenMultiplier": 1.3294460641399417,
+      "turnMultiplier": 23.7,
+      "wallClockMultiplier": 12.838599847598047,
+      "qualityDelta": 0
+    },
+    "medium::vs-spec-first": {
+      "task": "medium",
+      "baseline": "spec-first",
+      "rawTokenMultiplier": 46.7806823866607,
+      "costMultiplier": 11.054504682309465,
+      "outputTokenMultiplier": 3.7773754095533714,
+      "freshTokenMultiplier": 1.3255813953488371,
+      "turnMultiplier": 19.75,
+      "wallClockMultiplier": 5.625809018379193,
+      "qualityDelta": 0
+    },
+    "large::vs-no-tests": {
+      "task": "large",
+      "baseline": "no-tests",
+      "rawTokenMultiplier": 82.71169144482256,
+      "costMultiplier": 19.74705883227944,
+      "outputTokenMultiplier": 6.596899224806202,
+      "freshTokenMultiplier": 1.438136826783115,
+      "turnMultiplier": 28.545454545454547,
+      "wallClockMultiplier": 9.299140782316334,
+      "qualityDelta": 0
+    },
+    "large::vs-spec-first": {
+      "task": "large",
+      "baseline": "spec-first",
+      "rawTokenMultiplier": 56.84270431194104,
+      "costMultiplier": 8.555370703519353,
+      "outputTokenMultiplier": 2.345257123959654,
+      "freshTokenMultiplier": 1.436046511627907,
+      "turnMultiplier": 22.428571428571427,
+      "wallClockMultiplier": 3.567099597360474,
+      "qualityDelta": 0
+    }
+  },
+  "arms": {
+    "tdd": {
+      "label": "TDD (red-green-refactor)",
+      "blurb": "Strict test-first loop. One behaviour per cycle, tests must be run and observed failing before any implementation code is written."
+    },
+    "spec-first": {
+      "label": "Spec-first (design pass, then tests)",
+      "blurb": "Read the whole spec, design and implement the module in one pass, then write a test suite covering the spec and fix what it catches."
+    },
+    "no-tests": {
+      "label": "No tests (implementation only)",
+      "blurb": "Implement straight from the spec and write no tests at all. The control arm: isolates the cost of writing tests from the cost of ordering them test-first."
+    },
+    "reference": {
+      "label": "Reference (human-written)",
+      "blurb": "The author's own implementation, scored through the identical hold-out suite. No agent runs; it exists to prove the tasks are solvable and to mark the quality ceiling."
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "runId": "small__reference__r1",
+  "task": "small",
+  "arm": "reference",
+  "repeat": 1,
+  "model": null,
+  "agentRan": false,
+  "usage": null,
+  "process": {
+    "toolCalls": 0,
+    "testRuns": 0,
+    "fileWrites": 0
+  },
+  "workspace": {
+    "src": {
+      "files": 1,
+      "lines": 150,
+      "bytes": 6703
+    },
+    "tests": {
+      "files": 0,
+      "lines": 0,
+      "bytes": 0
+    }
+  },
+  "score": {
+    "hasSrc": true,
+    "holdoutPass": 15,
+    "holdoutFail": 0,
+    "holdoutExit": 0
+  },
+  "wallClockMs": 77
+}

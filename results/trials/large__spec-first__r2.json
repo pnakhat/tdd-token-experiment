@@ -1,0 +1,105 @@
+{
+  "runId": "large__spec-first__r2",
+  "task": "large",
+  "arm": "spec-first",
+  "repeat": 2,
+  "model": "claude-sonnet-5",
+  "agentRan": true,
+  "valid": true,
+  "invalidReasons": [],
+  "exitCode": 0,
+  "timedOut": false,
+  "usage": {
+    "perModel": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 676,
+        "outputTokens": 16,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "reportedCostUSD": 0.0007559999999999999
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 19266,
+        "cacheReadInputTokens": 123329,
+        "cacheCreationInputTokens": 27201,
+        "reportedCostUSD": 0.4892307
+      }
+    },
+    "priced": [
+      {
+        "model": "claude-haiku-4-5",
+        "priced": true,
+        "costUSD": 0.0007559999999999999,
+        "rates": {
+          "input": 1,
+          "output": 5
+        },
+        "tokens": {
+          "fresh": 676,
+          "output": 16,
+          "cacheRead": 0,
+          "cacheWrite5m": 0,
+          "cacheWrite1h": 0
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "priced": true,
+        "costUSD": 0.32615380000000005,
+        "rates": {
+          "input": 2,
+          "output": 10,
+          "note": "introductory pricing through 2026-08-31"
+        },
+        "tokens": {
+          "fresh": 12,
+          "output": 19266,
+          "cacheRead": 123329,
+          "cacheWrite5m": 0,
+          "cacheWrite1h": 27201
+        }
+      }
+    ],
+    "tokens": {
+      "fresh": 688,
+      "output": 19282,
+      "cacheRead": 123329,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 27201
+    },
+    "rawTokenTotal": 170500,
+    "recomputedCostUSD": 0.32690980000000003,
+    "reportedCostUSD": 0.4899867,
+    "numTurns": 7,
+    "durationMs": 148625,
+    "stopReason": "end_turn",
+    "isError": false,
+    "permissionDenials": 0
+  },
+  "process": {
+    "toolCalls": 6,
+    "testRuns": 1,
+    "fileWrites": 2,
+    "numTurns": 7
+  },
+  "workspace": {
+    "src": {
+      "files": 1,
+      "lines": 225,
+      "bytes": 7524
+    },
+    "tests": {
+      "files": 1,
+      "lines": 351,
+      "bytes": 13630
+    }
+  },
+  "score": {
+    "hasSrc": true,
+    "holdoutPass": 29,
+    "holdoutFail": 0,
+    "holdoutExit": 0
+  },
+  "wallClockMs": 150048
+}

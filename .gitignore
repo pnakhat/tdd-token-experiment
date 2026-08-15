@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+
+# Per-run agent event streams are large and reproducible from the trial records;
+# the JSON in results/trials/ is the durable evidence and is committed.
+runs/*/stream.jsonl
+runs/*.log

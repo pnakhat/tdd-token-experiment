@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: splitEven: remainder to earliest, exact sum
+ok 1 - splitEven: remainder to earliest, exact sum
+  ---
+  duration_ms: 0.627667
+  type: 'test'
+  ...
+# Subtest: splitEven: negative totals follow the floor rule
+ok 2 - splitEven: negative totals follow the floor rule
+  ---
+  duration_ms: 0.05075
+  type: 'test'
+  ...
+# Subtest: splitEven: property sweep sums exactly
+ok 3 - splitEven: property sweep sums exactly
+  ---
+  duration_ms: 0.229916
+  type: 'test'
+  ...
+# Subtest: splitEven: error types
+ok 4 - splitEven: error types
+  ---
+  duration_ms: 0.185125
+  type: 'test'
+  ...
+# Subtest: splitByWeight: exact and largest-remainder cases
+ok 5 - splitByWeight: exact and largest-remainder cases
+  ---
+  duration_ms: 0.106667
+  type: 'test'
+  ...
+# Subtest: splitByWeight: zero weights and negative totals
+ok 6 - splitByWeight: zero weights and negative totals
+  ---
+  duration_ms: 0.044208
+  type: 'test'
+  ...
+# Subtest: splitByWeight: property sweep sums exactly
+ok 7 - splitByWeight: property sweep sums exactly
+  ---
+  duration_ms: 0.645375
+  type: 'test'
+  ...
+# Subtest: splitByWeight: error types
+ok 8 - splitByWeight: error types
+  ---
+  duration_ms: 0.095542
+  type: 'test'
+  ...
+# Subtest: computeBalances: basic split and zero-sum
+ok 9 - computeBalances: basic split and zero-sum
+  ---
+  duration_ms: 0.140042
+  type: 'test'
+  ...
+# Subtest: computeBalances: participant order is observable
+ok 10 - computeBalances: participant order is observable
+  ---
+  duration_ms: 0.089167
+  type: 'test'
+  ...
+# Subtest: computeBalances: weighted shares
+ok 11 - computeBalances: weighted shares
+  ---
+  duration_ms: 0.047292
+  type: 'test'
+  ...
+# Subtest: computeBalances: weights default over all members when participants omitted
+ok 12 - computeBalances: weights default over all members when participants omitted
+  ---
+  duration_ms: 0.038292
+  type: 'test'
+  ...
+# Subtest: computeBalances: inactive members present at zero, balances sum to zero
+ok 13 - computeBalances: inactive members present at zero, balances sum to zero
+  ---
+  duration_ms: 0.062583
+  type: 'test'
+  ...
+# Subtest: computeBalances: error types
+ok 14 - computeBalances: error types
+  ---
+  duration_ms: 0.083167
+  type: 'test'
+  ...
+# Subtest: settle: worked example from the spec
+ok 15 - settle: worked example from the spec
+  ---
+  duration_ms: 0.111
+  type: 'test'
+  ...
+# Subtest: settle: one debtor across two creditors, largest credit first
+ok 16 - settle: one debtor across two creditors, largest credit first
+  ---
+  duration_ms: 0.0415
+  type: 'test'
+  ...
+# Subtest: settle: creditor ties break on member id ascending
+ok 17 - settle: creditor ties break on member id ascending
+  ---
+  duration_ms: 0.033541
+  type: 'test'
+  ...
+# Subtest: settle: all-zero sheet yields no transfers
+ok 18 - settle: all-zero sheet yields no transfers
+  ---
+  duration_ms: 0.0295
+  type: 'test'
+  ...
+# Subtest: settle: never emits a zero or negative amount
+ok 19 - settle: never emits a zero or negative amount
+  ---
+  duration_ms: 0.052166
+  type: 'test'
+  ...
+# Subtest: settle: uses at most n-1 transfers
+ok 20 - settle: uses at most n-1 transfers
+  ---
+  duration_ms: 0.029833
+  type: 'test'
+  ...
+# Subtest: settle: error types
+ok 21 - settle: error types
+  ---
+  duration_ms: 0.067708
+  type: 'test'
+  ...
+# Subtest: applyTransfers: settling a sheet zeroes it out
+ok 22 - applyTransfers: settling a sheet zeroes it out
+  ---
+  duration_ms: 0.055333
+  type: 'test'
+  ...
+# Subtest: applyTransfers: does not mutate its input
+ok 23 - applyTransfers: does not mutate its input
+  ---
+  duration_ms: 0.02775
+  type: 'test'
+  ...
+# Subtest: applyTransfers: direction — payer moves toward zero
+ok 24 - applyTransfers: direction — payer moves toward zero
+  ---
+  duration_ms: 0.023084
+  type: 'test'
+  ...
+# Subtest: applyTransfers: error types
+ok 25 - applyTransfers: error types
+  ---
+  duration_ms: 0.096084
+  type: 'test'
+  ...
+# Subtest: summarize: shape and roll-up
+ok 26 - summarize: shape and roll-up
+  ---
+  duration_ms: 0.056083
+  type: 'test'
+  ...
+# Subtest: summarize: empty expenses
+ok 27 - summarize: empty expenses
+  ---
+  duration_ms: 0.02625
+  type: 'test'
+  ...
+# Subtest: summarize: end-to-end settles to zero on a messy ledger
+ok 28 - summarize: end-to-end settles to zero on a messy ledger
+  ---
+  duration_ms: 0.052875
+  type: 'test'
+  ...
+# Subtest: summarize: propagates validation errors
+ok 29 - summarize: propagates validation errors
+  ---
+  duration_ms: 0.039125
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 40.36125

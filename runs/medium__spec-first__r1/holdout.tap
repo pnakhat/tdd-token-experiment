@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: splitEven: remainder to earliest, exact sum
+ok 1 - splitEven: remainder to earliest, exact sum
+  ---
+  duration_ms: 0.847667
+  type: 'test'
+  ...
+# Subtest: splitEven: negative totals follow the floor rule
+ok 2 - splitEven: negative totals follow the floor rule
+  ---
+  duration_ms: 0.050292
+  type: 'test'
+  ...
+# Subtest: splitEven: property sweep sums exactly
+ok 3 - splitEven: property sweep sums exactly
+  ---
+  duration_ms: 0.224875
+  type: 'test'
+  ...
+# Subtest: splitEven: error types
+ok 4 - splitEven: error types
+  ---
+  duration_ms: 0.174
+  type: 'test'
+  ...
+# Subtest: splitByWeight: exact proportional cases
+ok 5 - splitByWeight: exact proportional cases
+  ---
+  duration_ms: 0.100583
+  type: 'test'
+  ...
+# Subtest: splitByWeight: largest-remainder tie-break favours lower index
+ok 6 - splitByWeight: largest-remainder tie-break favours lower index
+  ---
+  duration_ms: 0.045416
+  type: 'test'
+  ...
+# Subtest: splitByWeight: leftover goes to the biggest remainder
+ok 7 - splitByWeight: leftover goes to the biggest remainder
+  ---
+  duration_ms: 0.033209
+  type: 'test'
+  ...
+# Subtest: splitByWeight: zero weights receive nothing
+ok 8 - splitByWeight: zero weights receive nothing
+  ---
+  duration_ms: 0.048375
+  type: 'test'
+  ...
+# Subtest: splitByWeight: negative totals are computed on the magnitude then negated
+ok 9 - splitByWeight: negative totals are computed on the magnitude then negated
+  ---
+  duration_ms: 0.0515
+  type: 'test'
+  ...
+# Subtest: splitByWeight: zero total
+ok 10 - splitByWeight: zero total
+  ---
+  duration_ms: 0.065208
+  type: 'test'
+  ...
+# Subtest: splitByWeight: property sweep sums exactly and stays non-negative in sign
+ok 11 - splitByWeight: property sweep sums exactly and stays non-negative in sign
+  ---
+  duration_ms: 0.794375
+  type: 'test'
+  ...
+# Subtest: splitByWeight: error types
+ok 12 - splitByWeight: error types
+  ---
+  duration_ms: 0.098334
+  type: 'test'
+  ...
+# Subtest: computeBalances: single expense split across all members
+ok 13 - computeBalances: single expense split across all members
+  ---
+  duration_ms: 0.097042
+  type: 'test'
+  ...
+# Subtest: computeBalances: every member appears, inactive ones at zero
+ok 14 - computeBalances: every member appears, inactive ones at zero
+  ---
+  duration_ms: 0.039084
+  type: 'test'
+  ...
+# Subtest: computeBalances: participants subset and ordering
+ok 15 - computeBalances: participants subset and ordering
+  ---
+  duration_ms: 0.044625
+  type: 'test'
+  ...
+# Subtest: computeBalances: payer can also be a participant
+ok 16 - computeBalances: payer can also be a participant
+  ---
+  duration_ms: 0.035583
+  type: 'test'
+  ...
+# Subtest: computeBalances: multiple expenses accumulate
+ok 17 - computeBalances: multiple expenses accumulate
+  ---
+  duration_ms: 0.027459
+  type: 'test'
+  ...
+# Subtest: computeBalances: negative amounts (refunds) are supported
+ok 18 - computeBalances: negative amounts (refunds) are supported
+  ---
+  duration_ms: 0.0305
+  type: 'test'
+  ...
+# Subtest: computeBalances: balances always sum to zero
+ok 19 - computeBalances: balances always sum to zero
+  ---
+  duration_ms: 0.037625
+  type: 'test'
+  ...
+# Subtest: computeBalances: error types
+ok 20 - computeBalances: error types
+  ---
+  duration_ms: 0.192375
+  type: 'test'
+  ...
+# Subtest: computeBalances: does not mutate its inputs
+ok 21 - computeBalances: does not mutate its inputs
+  ---
+  duration_ms: 0.031417
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 39.399

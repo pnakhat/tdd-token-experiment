@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: splits evenly when divisible
+ok 1 - splits evenly when divisible
+  ---
+  duration_ms: 0.871167
+  type: 'test'
+  ...
+# Subtest: remainder goes to the earliest elements
+ok 2 - remainder goes to the earliest elements
+  ---
+  duration_ms: 0.07925
+  type: 'test'
+  ...
+# Subtest: parts of 1 returns the whole amount
+ok 3 - parts of 1 returns the whole amount
+  ---
+  duration_ms: 0.053708
+  type: 'test'
+  ...
+# Subtest: zero total
+ok 4 - zero total
+  ---
+  duration_ms: 0.050458
+  type: 'test'
+  ...
+# Subtest: more parts than cents
+ok 5 - more parts than cents
+  ---
+  duration_ms: 0.043666
+  type: 'test'
+  ...
+# Subtest: negative totals follow the floor rule
+ok 6 - negative totals follow the floor rule
+  ---
+  duration_ms: 0.040792
+  type: 'test'
+  ...
+# Subtest: always returns exactly `parts` integers
+ok 7 - always returns exactly `parts` integers
+  ---
+  duration_ms: 0.074042
+  type: 'test'
+  ...
+# Subtest: always sums exactly to the total (property sweep)
+ok 8 - always sums exactly to the total (property sweep)
+  ---
+  duration_ms: 0.573834
+  type: 'test'
+  ...
+# Subtest: elements differ by at most 1
+ok 9 - elements differ by at most 1
+  ---
+  duration_ms: 0.244334
+  type: 'test'
+  ...
+# Subtest: handles large values without float error
+ok 10 - handles large values without float error
+  ---
+  duration_ms: 0.084833
+  type: 'test'
+  ...
+# Subtest: TypeError on non-integer total
+ok 11 - TypeError on non-integer total
+  ---
+  duration_ms: 0.207834
+  type: 'test'
+  ...
+# Subtest: TypeError on non-integer parts
+ok 12 - TypeError on non-integer parts
+  ---
+  duration_ms: 0.076
+  type: 'test'
+  ...
+# Subtest: RangeError when parts < 1
+ok 13 - RangeError when parts < 1
+  ---
+  duration_ms: 0.053083
+  type: 'test'
+  ...
+# Subtest: thrown errors carry a non-empty message
+ok 14 - thrown errors carry a non-empty message
+  ---
+  duration_ms: 0.029417
+  type: 'test'
+  ...
+# Subtest: does not mutate or alias its output
+ok 15 - does not mutate or alias its output
+  ---
+  duration_ms: 0.025
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 41.368583

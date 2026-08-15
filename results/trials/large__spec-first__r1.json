@@ -1,0 +1,105 @@
+{
+  "runId": "large__spec-first__r1",
+  "task": "large",
+  "arm": "spec-first",
+  "repeat": 1,
+  "model": "claude-sonnet-5",
+  "agentRan": true,
+  "valid": true,
+  "invalidReasons": [],
+  "exitCode": 0,
+  "timedOut": false,
+  "usage": {
+    "perModel": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 676,
+        "outputTokens": 16,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "reportedCostUSD": 0.0007559999999999999
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 12,
+        "outputTokens": 16988,
+        "cacheReadInputTokens": 117294,
+        "cacheCreationInputTokens": 25038,
+        "reportedCostUSD": 0.4402722
+      }
+    },
+    "priced": [
+      {
+        "model": "claude-haiku-4-5",
+        "priced": true,
+        "costUSD": 0.0007559999999999999,
+        "rates": {
+          "input": 1,
+          "output": 5
+        },
+        "tokens": {
+          "fresh": 676,
+          "output": 16,
+          "cacheRead": 0,
+          "cacheWrite5m": 0,
+          "cacheWrite1h": 0
+        }
+      },
+      {
+        "model": "claude-sonnet-5",
+        "priced": true,
+        "costUSD": 0.29351479999999996,
+        "rates": {
+          "input": 2,
+          "output": 10,
+          "note": "introductory pricing through 2026-08-31"
+        },
+        "tokens": {
+          "fresh": 12,
+          "output": 16988,
+          "cacheRead": 117294,
+          "cacheWrite5m": 0,
+          "cacheWrite1h": 25038
+        }
+      }
+    ],
+    "tokens": {
+      "fresh": 688,
+      "output": 17004,
+      "cacheRead": 117294,
+      "cacheWrite5m": 0,
+      "cacheWrite1h": 25038
+    },
+    "rawTokenTotal": 160024,
+    "recomputedCostUSD": 0.29427079999999994,
+    "reportedCostUSD": 0.4410282000000001,
+    "numTurns": 7,
+    "durationMs": 134738,
+    "stopReason": "end_turn",
+    "isError": false,
+    "permissionDenials": 0
+  },
+  "process": {
+    "toolCalls": 6,
+    "testRuns": 1,
+    "fileWrites": 2,
+    "numTurns": 7
+  },
+  "workspace": {
+    "src": {
+      "files": 1,
+      "lines": 184,
+      "bytes": 7049
+    },
+    "tests": {
+      "files": 1,
+      "lines": 437,
+      "bytes": 17558
+    }
+  },
+  "score": {
+    "hasSrc": true,
+    "holdoutPass": 29,
+    "holdoutFail": 0,
+    "holdoutExit": 0
+  },
+  "wallClockMs": 136064
+}
